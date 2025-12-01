@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- 1. Tema base do aplicativo -->
+    <style name="Base.Theme.SyncMeet" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customizações globais do tema vão aqui -->
+    </style>
+
+    <!-- Tema final aplicado no Manifest -->
+    <style name="Theme.SyncMeet" parent="Base.Theme.SyncMeet" />
+
+
+    <!-- Estilo customizado para os nossos Inputs (AGORA CORRETO) -->
+    <style name="Widget.App.TextInputLayout" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <!-- Cor de fundo da caixa -->
+        <item name="boxBackgroundColor">#1C1C1E</item>
+
+        <!-- Cor do texto/hint em repouso -->
+        <item name="android:textColorHint">#A0A0A0</item>
+
+        <!-- Cor do rótulo flutuante -->
+        <item name="hintTextColor">#A0A0A0</item>
+
+        <!-- Fonte customizada -->
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+
+
+    <!-- res/values/themes.xml --><!-- Adicione este estilo -->
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <!--
+            Esta linha define o estilo que será usado para o TextInputEditText
+            DENTRO de qualquer view que usar este overlay.
+        -->
+        <item name="textInputStyle">@style/Widget.App.TextInputEditText.Padding</item>
+    </style>
+
+    <!--
+        E este é o estilo que define o padding.
+        Note que o parent está vazio, ele é um estilo "puro".
+    -->
+    <style name="Widget.App.TextInputEditText.Padding" parent="">
+        <item name="android:paddingStart">30dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+
+
+</resources>

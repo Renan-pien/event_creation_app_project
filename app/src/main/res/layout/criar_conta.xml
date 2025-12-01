@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/criar_conta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente"
+    tools:context=".CriarContaActivity">
+
+    <!-- Botão de voltar em cima -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginBottom="-135dp"
+        android:elevation="1dp"
+        android:contentDescription="@string/logo_do_aplicativo_syncmeet"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/container_cadastro"
+        app:layout_constraintEnd_toEndOf="@+id/container_cadastro"
+        app:layout_constraintStart_toStartOf="@+id/container_cadastro" />
+
+    <!-- Container do cadastro -->
+    <LinearLayout
+        android:id="@+id/container_cadastro"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/container_borda"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_layout_create"
+            style="@style/Widget.App.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="50dp"
+            android:hint="@string/email"
+            android:theme="@style/ThemeOverlay.App.TextInputLayout"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edittext_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="#FFFFFF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Usuário -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usuario_layout_create"
+            style="@style/Widget.App.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:hint="@string/usu_rio"
+            android:theme="@style/ThemeOverlay.App.TextInputLayout"
+            app:startIconDrawable="@drawable/ic_usuario"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usuario_edittext_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Senha -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout_create"
+            style="@style/Widget.App.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:hint="@string/senha"
+            android:theme="@style/ThemeOverlay.App.TextInputLayout"
+            app:startIconDrawable="@drawable/ic_cadeado"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_edittext_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Repetir senha -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirm_password_layout_create"
+            style="@style/Widget.App.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:hint="@string/confirmar_senha"
+            android:theme="@style/ThemeOverlay.App.TextInputLayout"
+            app:startIconDrawable="@drawable/ic_cadeado"
+            app:startIconTint="#FFFFFF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirm_password_edittext_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botão de cadastro -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="105dp"
+            android:padding="12dp"
+            android:text="@string/cadastrar"
+            android:textSize="16sp"
+            app:backgroundTint="#8b5cf6"
+            app:cornerRadius="29dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

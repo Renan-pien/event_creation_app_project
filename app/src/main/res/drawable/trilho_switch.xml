@@ -1,0 +1,24 @@
+<!-- res/drawable/switch_track_custom.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Estado: LIGADO e Ativado -->
+    <item android:state_checked="true" android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <!-- Quando está ligado -->
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="100dp" />
+            <size android:height="20dp" />
+        </shape>
+    </item>
+
+    <!-- Estado Padrão: DESLIGADO e Ativado -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Quando está desligado -->
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="100dp" />
+            <size android:height="20dp" />
+        </shape>
+    </item>
+
+</selector>

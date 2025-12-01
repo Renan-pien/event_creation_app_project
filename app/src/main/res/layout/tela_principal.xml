@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".TelaPrincipalActivity"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradiente">
+
+        <!-- Botão para abrir o DrawerMenu -->
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Menu"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo_main"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/logo_do_aplicativo_syncmeet"
+            android:elevation="1dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/botao_criar_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Botão para criar evento -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao_criar_evento"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_button_gradient_border"
+            android:drawableLeft="@drawable/ic_add"
+            android:fontFamily="@font/open_sans_regular"
+            android:paddingLeft="16dp"
+            android:text="CRIAR NOVO EVENTO"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/botao_edit_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_main" />
+
+        <!-- Botão para editar evento -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao_edit_evento"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_button_gradient_border"
+            android:drawableLeft="@drawable/ic_edit"
+            android:fontFamily="@font/open_sans_regular"
+            android:paddingLeft="16dp"
+            android:text="EDITAR EVENTOS"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/botao_exclui_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/botao_criar_evento" />
+
+        <!-- Botão para excluir evento -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao_exclui_evento"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button_gradient_border"
+            android:drawableLeft="@drawable/ic_delete"
+            android:fontFamily="@font/open_sans_regular"
+            android:paddingLeft="16dp"
+            android:text="EXCLUIR EVENTOS"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/botao_edit_evento" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- DrawerMenu -->
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@android:color/black"
+        android:orientation="vertical">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:headerLayout="@layout/nav_header"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="@android:color/white"
+            app:menu="@menu/drawer_menu" />
+
+        <include layout="@layout/nav_footer" />
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

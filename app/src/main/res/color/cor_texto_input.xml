@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- A cor padrão para TUDO será BRANCA.
+         Isso afeta o hint em repouso E o texto digitado. -->
+    <item android:color="@android:color/white" />
+</selector>

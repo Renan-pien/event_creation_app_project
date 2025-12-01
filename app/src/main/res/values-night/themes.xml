@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- 1. Tema base no modo escuro -->
+    <style name="Base.Theme.SyncMeet" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customizações do modo dark -->
+    </style>
+
+    <!-- Tema final aplicado no Manifest -->
+    <style name="Theme.SyncMeet" parent="Base.Theme.SyncMeet" />
+
+</resources>

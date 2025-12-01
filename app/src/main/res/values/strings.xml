@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SyncMeet</string>
+    <string name="lembrar_de_mim">Lembrar de mim</string>
+    <string name="senha">Senha</string>
+    <string name="email_ou_usu_rio">Email ou usuário</string>
+    <string name="criar_nova_conta">Criar nova conta</string>
+    <string name="login">Login</string>
+    <string name="esqueceu_a_senha">Esqueceu a senha?</string>
+    <string name="email">Email</string>
+    <string name="usu_rio">Usuário</string>
+    <string name="confirmar_senha">Confirmar senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="logo_do_aplicativo_syncmeet">Logo do aplicativo SyncMeet</string>
+</resources>

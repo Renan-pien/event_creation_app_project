@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.syncmeet">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:label="SyncMeet"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SyncMeet"
+        android:usesCleartextTraffic="true">
+
+        <!-- TELA LOGIN (PRINCIPAL) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Criar Conta -->
+        <activity
+            android:name=".CriarContaActivity"
+            android:exported="false" />
+
+        <!-- Tela Principal após Login -->
+        <activity
+            android:name=".TelaPrincipalActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CriarEventoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EditarEventoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EditarEventoDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExcluirEventoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AgendaEventoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoricoEventoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoricoEventoDetailActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".EventoLembreteReceiver"
+            android:exported="false" />
+
+
+
+    </application>
+
+</manifest>
